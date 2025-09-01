@@ -105,8 +105,8 @@ export default function HomePage() {
                   skills development.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 text-pretty">
-                  Under the leadership of CEO Mr. Joseph Addai, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
-                  Head of Marketing Owen Abrefa Busia, we've created a unique environment where everything happens on
+                  Under the leadership of Mr. Joseph Addai CEO of the Academy, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
+                  Head of Marketing, Owen Abrefa Busia, we've created a unique environment where everything happens on
                   the field - no formal classroom lessons, just pure soccer development.
                 </p>
                 <div className="grid grid-cols-2 gap-6 mb-8">
@@ -424,7 +424,7 @@ export default function HomePage() {
                     <Phone className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Phone</h4>
-                      <p className="text-muted-foreground">+233 24 123 4567</p>
+                      <p className="text-muted-foreground">+233 201 000 109</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -438,8 +438,9 @@ export default function HomePage() {
                     <Clock className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Training Hours</h4>
-                      <p className="text-muted-foreground">Mon-Fri: 4:00 PM - 8:00 PM</p>
-                      <p className="text-muted-foreground">Sat-Sun: 8:00 AM - 6:00 PM</p>
+                      <p className="text-muted-foreground">Teusday-Friday:</p>
+                      <p className="text-muted-foreground"> Morning 6:00AM - 10:00 AM</p>
+                      <p className="text-muted-foreground">Evening 3:00PM - 6:00PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -562,7 +563,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm text-background/80">
                 <li>Adenta Amrahia, Accra</li>
                 <li>Ghana, West Africa</li>
-                <li>+233 24 123 4567</li>
+                <li>+233 201 000 109</li>
                 <li>info@joscitysoccer.com</li>
               </ul>
             </div>
