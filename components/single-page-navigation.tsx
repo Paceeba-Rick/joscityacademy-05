@@ -45,7 +45,6 @@ export function SinglePageNavigation() {
     { id: "about", label: "About" },
     { id: "programs", label: "Programs" },
     { id: "kit", label: "Kit" },
-    { id: "coaches", label: "Coaches" },
     { id: "gallery", label: "Gallery" },
     { id: "contact", label: "Contact" },
   ]
