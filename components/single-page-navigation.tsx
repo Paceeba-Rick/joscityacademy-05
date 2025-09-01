@@ -11,7 +11,7 @@ export function SinglePageNavigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ["home", "about", "programs", "kit", "coaches", "gallery", "contact"]
+      const sections = ["home", "about", "programs", "kit", "gallery", "contact"]
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
