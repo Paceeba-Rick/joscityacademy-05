@@ -330,7 +330,7 @@ export default function HomePage() {
                 role: "Head of Marketing",
                 experience: "Marketing & Community Outreach",
                 credentials: "Specialist in sports marketing and community engagement",
-                image: "/owen1.JPEG",
+                image: "/owen1.jpeg",
               },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
