@@ -382,7 +382,6 @@ export default function HomePage() {
                 src: "/ghana-football-association-event.jpeg",
                 alt: "Academy representatives at Ghana Football Association event",
               },
-              { src: "/goalkeeper-training-session.jpeg", alt: "Goalkeeper during specialized training session" },
             ].map((image, index) => (
               <ScrollAnimation key={index} delay={index * 50}>
                 <div className="relative overflow-hidden rounded-lg aspect-square hover:scale-105 transition-transform duration-300 cursor-pointer group">
