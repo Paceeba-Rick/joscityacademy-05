@@ -333,10 +333,10 @@ export default function HomePage() {
                 image: "/owen (2).png",
               },
                {
-                name: "Owen Abrefa Busia",
-                role: "Head of Marketing",
-                experience: "Marketing & Community Outreach",
-                credentials: "Specialist in sports marketing and community engagement",
+                name: "Dauda Jawara",
+                role: "Head Coach",
+                experience: "Formar Head Coach Real Magrid Foundation, Egypt",
+                credentials: "EL Gouna Egypt",
                 image: "/owen (2).png",
               },
             ].map((leader, index) => (
