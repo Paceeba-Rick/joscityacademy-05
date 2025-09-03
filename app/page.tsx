@@ -337,7 +337,7 @@ export default function HomePage() {
                 role: "Head Coach",
                 experience: "Formar Head Coach Real Magrid Foundation, Egypt",
                 credentials: "EL Gouna Egypt",
-                image: "/owen (2).png",
+                image: "/coach.jpeg",
               },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
