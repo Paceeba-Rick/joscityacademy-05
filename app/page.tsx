@@ -332,6 +332,13 @@ export default function HomePage() {
                 credentials: "Specialist in sports marketing and community engagement",
                 image: "/owen (2).png",
               },
+               {
+                name: "Owen Abrefa Busia",
+                role: "Head of Marketing",
+                experience: "Marketing & Community Outreach",
+                credentials: "Specialist in sports marketing and community engagement",
+                image: "/owen (2).png",
+              },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
                 <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
