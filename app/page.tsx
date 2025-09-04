@@ -865,6 +865,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Sponsors Section */}
+      <section className="py-16 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Our Sponsors</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Proud to be supported by leading organizations who believe in developing Ghana's future soccer stars
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.2}>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+                <img
+                  src="/sponsor-ebisbank.jpeg"
+                  alt="EBISBANK - Financial Partner"
+                  className="w-full h-20 object-contain"
+                />
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+                <img src="/sponsor-stp.jpeg" alt="STP - Technology Partner" className="w-full h-20 object-contain" />
+              </div>
+
+              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+                <img src="/sponsor-eyeball.jpeg" alt="EYEBALL - Media Partner" className="w-full h-20 object-contain" />
+              </div>
+            </div>
+          </ScrollAnimation>
+
+          <ScrollAnimation delay={0.4}>
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground">
+                Interested in partnering with Jos City Soccer Academy?
+                <a href="mailto:info.joscitysoccer@gmail.com" className="text-primary hover:underline ml-1">
+                  Contact us
+                </a>
+              </p>
+            </div>
+          </ScrollAnimation>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
