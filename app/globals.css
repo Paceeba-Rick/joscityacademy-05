@@ -4,70 +4,71 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Updated color scheme for Jos City Soccer Academy - Single Page Design */
+  /* Updated color scheme to match Jos City Soccer Academy logo - Red and Gold */
   --background: #ffffff;
-  --foreground: #374151;
-  --card: #f0fdf4;
-  --card-foreground: #374151;
+  --foreground: #1f2937; /* Dark gray for better readability */
+  --card: #fef7ed; /* Light warm background */
+  --card-foreground: #1f2937;
   --popover: #ffffff;
-  --popover-foreground: #374151;
-  --primary: #15803d; /* For call-to-action buttons */
+  --popover-foreground: #1f2937;
+  --primary: #dc2626; /* Red from logo */
   --primary-foreground: #ffffff;
-  --secondary: #84cc16; /* For highlights */
-  --secondary-foreground: #ffffff;
-  --muted: #f0fdf4;
-  --muted-foreground: #374151;
-  --accent: #84cc16; /* For hover effects */
-  --accent-foreground: #ffffff;
-  --destructive: #ea580c;
+  --secondary: #f59e0b; /* Gold/Yellow from logo */
+  --secondary-foreground: #1f2937;
+  --muted: #fef7ed;
+  --muted-foreground: #6b7280;
+  --accent: #f59e0b; /* Gold for hover effects */
+  --accent-foreground: #1f2937;
+  --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #e5e7eb; /* Light gray for borders */
-  --input: #ffffff; /* Input fields background */
-  --ring: #15803d; /* Focus ring */
-  --chart-1: #15803d; /* Primary chart color */
-  --chart-2: #84cc16; /* Secondary chart color */
-  --chart-3: #f97316; /* Tertiary chart color */
-  --chart-4: #d97706; /* Quaternary chart color */
-  --chart-5: #ea580c; /* Quinary chart color */
-  --radius: 0.5rem; /* For rounded corners */
-  --sidebar: #f0fdf4;
-  --sidebar-foreground: #374151;
-  --sidebar-primary: #ffffff;
-  --sidebar-primary-foreground: #374151;
-  --sidebar-accent: #84cc16;
-  --sidebar-accent-foreground: #ffffff;
+  --border: #e5e7eb;
+  --input: #ffffff;
+  --ring: #dc2626; /* Red focus ring */
+  --chart-1: #dc2626; /* Red */
+  --chart-2: #f59e0b; /* Gold */
+  --chart-3: #d97706; /* Darker gold */
+  --chart-4: #b91c1c; /* Darker red */
+  --chart-5: #92400e; /* Dark amber */
+  --radius: 0.5rem;
+  --sidebar: #fef7ed;
+  --sidebar-foreground: #1f2937;
+  --sidebar-primary: #dc2626;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f59e0b;
+  --sidebar-accent-foreground: #1f2937;
   --sidebar-border: #e5e7eb;
-  --sidebar-ring: #15803d;
+  --sidebar-ring: #dc2626;
 }
 
 .dark {
+  /* Updated dark mode colors to complement the red and gold theme */
   --background: #0f172a;
   --foreground: #f8fafc;
   --card: #1e293b;
   --card-foreground: #f8fafc;
   --popover: #0f172a;
   --popover-foreground: #f8fafc;
-  --primary: #22c55e; /* Lighter green for dark mode */
+  --primary: #ef4444; /* Lighter red for dark mode */
   --primary-foreground: #0f172a;
-  --secondary: #a3e635;
+  --secondary: #fbbf24; /* Brighter gold for dark mode */
   --secondary-foreground: #0f172a;
   --muted: #1e293b;
   --muted-foreground: #94a3b8;
-  --accent: #a3e635;
+  --accent: #fbbf24;
   --accent-foreground: #0f172a;
-  --destructive: #f97316;
+  --destructive: #f87171;
   --destructive-foreground: #0f172a;
   --border: #334155;
   --input: #1e293b;
-  --ring: #22c55e;
-  --chart-1: #22c55e;
-  --chart-2: #a3e635;
-  --chart-3: #f97316;
-  --chart-4: #d97706;
-  --chart-5: #ea580c;
+  --ring: #ef4444;
+  --chart-1: #ef4444;
+  --chart-2: #fbbf24;
+  --chart-3: #f59e0b;
+  --chart-4: #dc2626;
+  --chart-5: #d97706;
   --sidebar: #1e293b;
   --sidebar-foreground: #f8fafc;
-  --sidebar-primary: #22c55e;
+  --sidebar-primary: #ef4444;
   --sidebar-primary-foreground: #0f172a;
   --sidebar-accent: #334155;
   --sidebar-accent-foreground: #f8fafc;
@@ -185,5 +186,43 @@
   .animate-on-scroll.animate {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Metallic gold text and button effects */
+  .metallic-gold-text {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #fbbf24 75%, #f59e0b 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s ease-in-out infinite;
+    text-shadow: 0 0 30px rgba(251, 191, 36, 0.5);
+  }
+
+  .metallic-gold-button {
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #d97706 50%, #fbbf24 75%, #f59e0b 100%);
+    background-size: 200% 200%;
+    animation: shimmer 3s ease-in-out infinite;
+    box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(217, 119, 6, 0.3);
+    color: #1f2937;
+    font-weight: 600;
+  }
+
+  .metallic-gold-button:hover {
+    box-shadow: 0 6px 20px rgba(251, 191, 36, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-1px);
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 }

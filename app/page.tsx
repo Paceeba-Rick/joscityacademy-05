@@ -7,22 +7,23 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
-import { Trophy, Users, Target, Star, MapPin, Phone, Mail, Clock, Award, Shield, Heart, Zap } from "lucide-react"
-import { Youtube, Facebook, Instagram, Dropbox, Globe } from "lucide-react"
-
-// SVG for TikTok icon (since Lucide doesn't have it)
-const TikTokIcon = (props: React.ComponentProps<'svg'>) => (
-  <svg
-    width={props.width || 24}
-    height={props.height || 24}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    aria-label="TikTok"
-    {...props}
-  >
-    <path d="M17.5 2c.3 3.1 2.4 5.4 5.5 5.7v3c-2.2 0-4.3-.7-6-2v7.8c0 4-3.2 7.2-7.2 7.2S2.6 20.5 2.6 16.5c0-4 3.2-7.2 7.2-7.2h.4v3h-.4c-2.4 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2V2h3z"/>
-  </svg>
-)
+import {
+  Trophy,
+  Users,
+  Target,
+  Star,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Award,
+  Shield,
+  Heart,
+  Zap,
+  Youtube,
+  Video,
+  Cloud,
+} from "lucide-react"
 
 export default function HomePage() {
   const scrollToSection = (sectionId: string) => {
@@ -52,7 +53,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              Jos City Soccer <span className="text-primary">Academy</span>
+              Jos City Soccer <span className="metallic-gold-text">Academy</span>
             </h1>
           </ScrollAnimation>
           <ScrollAnimation delay={200}>
@@ -65,7 +66,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-lg px-8 py-3"
+                className="metallic-gold-button text-lg px-8 py-3 hover:metallic-gold-button"
                 onClick={() => scrollToSection("contact")}
               >
                 Start Your Journey
@@ -73,7 +74,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-transparent"
+                className="text-lg px-8 py-3 bg-accent/10 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
                 onClick={() => scrollToSection("gallery")}
               >
                 Watch Our Story
@@ -84,7 +85,7 @@ export default function HomePage() {
           <ScrollAnimation delay={600}>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary">150+</div>
+                <div className="text-3xl md:text-4xl font-bold text-accent">150+</div>
                 <div className="text-muted-foreground">Active Players</div>
               </div>
               <div className="text-center">
@@ -92,7 +93,7 @@ export default function HomePage() {
                 <div className="text-muted-foreground">Expert Coaches</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary">5</div>
+                <div className="text-3xl md:text-4xl font-bold text-accent">5</div>
                 <div className="text-muted-foreground">Age Categories</div>
               </div>
               <div className="text-center">
@@ -120,8 +121,8 @@ export default function HomePage() {
                   skills development.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 text-pretty">
-                  Under the leadership of Mr. Joseph Addai CEO of the Academy, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
-                  Head of Marketing, Owen Abrefa Busia, we've created a unique environment where everything happens on
+                  Under the leadership of CEO Mr. Joseph Addai, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
+                  Head of Marketing Owen Abrefa Busia, we've created a unique environment where everything happens on
                   the field - no formal classroom lessons, just pure soccer development.
                 </p>
                 <div className="grid grid-cols-2 gap-6 mb-8">
@@ -154,7 +155,7 @@ export default function HomePage() {
                   alt="Jos City Soccer Academy team group photo showing players in yellow and white jerseys"
                   className="rounded-lg shadow-lg w-full"
                 />
-                <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-6 rounded-lg shadow-lg">
+                <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-lg shadow-lg">
                   <div className="text-2xl font-bold">2025</div>
                   <div className="text-sm">Rebranded Year</div>
                 </div>
@@ -228,18 +229,18 @@ export default function HomePage() {
               <ScrollAnimation key={program.title} delay={index * 100}>
                 <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
                   <CardContent className="p-6">
-                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4 group-hover:bg-primary/20 transition-colors">
-                      <program.icon className="h-6 w-6 text-primary" />
+                    <div className="flex items-center justify-center w-12 h-12 bg-primary/10 rounded-lg mb-4 group-hover:bg-accent/20 transition-colors">
+                      <program.icon className="h-6 w-6 text-primary group-hover:text-accent transition-colors" />
                     </div>
                     <h3 className="text-xl font-bold text-card-foreground mb-2">{program.title}</h3>
-                    <Badge variant="secondary" className="mb-3">
+                    <Badge variant="secondary" className="mb-3 bg-accent/10 text-accent border-accent/20">
                       {program.age}
                     </Badge>
                     <p className="text-muted-foreground mb-4 text-pretty">{program.description}</p>
                     <ul className="space-y-2">
                       {program.features.map((feature) => (
                         <li key={feature} className="flex items-center text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full mr-2"></div>
                           {feature}
                         </li>
                       ))}
@@ -299,7 +300,7 @@ export default function HomePage() {
 
           <ScrollAnimation delay={400}>
             <div className="text-center mt-12">
-              <div className="bg-primary/10 rounded-lg p-6 max-w-2xl mx-auto">
+              <div className="bg-accent/10 border border-accent/20 rounded-lg p-6 max-w-2xl mx-auto">
                 <h4 className="text-lg font-bold text-card-foreground mb-2">Uniform Standards</h4>
                 <p className="text-muted-foreground text-pretty">
                   All players receive their official kit upon enrollment, maintaining our professional appearance and
@@ -324,7 +325,7 @@ export default function HomePage() {
             </div>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: "Mr. Joseph Addai",
@@ -338,21 +339,14 @@ export default function HomePage() {
                 role: "Deputy CEO & Brand Director",
                 experience: "Brand Development & Strategic Leadership",
                 credentials: "Expert in academy branding and strategic growth",
-                image: "/akua-boahen.jpeg",
+                image: "/akua-boahen-new.jpeg",
               },
               {
                 name: "Owen Abrefa Busia",
                 role: "Head of Marketing",
                 experience: "Marketing & Community Outreach",
                 credentials: "Specialist in sports marketing and community engagement",
-                image: "/owen (2).png",
-              },
-               {
-                name: "Dauda Jawara",
-                role: "Head Coach",
-                experience: "Formar Head Coach Real Magrid Foundation, Egypt",
-                credentials: "EL Gouna Egypt",
-                image: "/coach.jpeg",
+                image: "/owen-abrefa-busia.png", // Updated to use new professional headshot
               },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
@@ -361,10 +355,10 @@ export default function HomePage() {
                     <img
                       src={leader.image || "/placeholder.svg"}
                       alt={leader.name}
-                      className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top" // Added object-top to position image from top, ensuring hair is visible
                     />
                     <h3 className="text-xl font-bold text-card-foreground mb-1">{leader.name}</h3>
-                    <p className="text-primary font-medium mb-2">{leader.role}</p>
+                    <p className="text-accent font-medium mb-2">{leader.role}</p>
                     <p className="text-sm text-muted-foreground mb-2">{leader.experience}</p>
                     <p className="text-xs text-muted-foreground">{leader.credentials}</p>
                   </CardContent>
@@ -387,32 +381,363 @@ export default function HomePage() {
             </div>
           </ScrollAnimation>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              { src: "/academy-players-different-jerseys.jpeg", alt: "Academy players in different team jerseys" },
-              { src: "/night-match-celebration.jpeg", alt: "Player celebrating during night match" },
-              { src: "/team-photo-red-jerseys.jpeg", alt: "Team photo with players in red jerseys" },
-              { src: "/players-bench-orange-jerseys.jpeg", alt: "Players on bench in orange jerseys" },
-              { src: "/players-yellow-black-jerseys.jpeg", alt: "Players in yellow and black striped jerseys" },
-              { src: "/young-girl-player.jpeg", alt: "Young female player at the academy" },
-              { src: "/players-white-jerseys-training.jpeg", alt: "Players in white jerseys during training" },
-              { src: "/large-group-academy-photo.jpeg", alt: "Large group photo of academy players" },
-              { src: "/players-stadium-seats.jpeg", alt: "Players and staff relaxing in colorful stadium seats" },
-              { src: "/night-celebration-victory.jpeg", alt: "Victory celebration during night match" },
-              { src: "/team-black-white-jerseys.jpeg", alt: "Team photo with black and white striped jerseys" },
-              {
-                src: "/ghana-football-association-event.jpeg",
-                alt: "Academy representatives at Ghana Football Association event",
-              },
-            ].map((image, index) => (
-              <ScrollAnimation key={index} delay={index * 50}>
-                <div className="relative overflow-hidden rounded-lg aspect-square hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                  <img src={image.src || "/placeholder.svg"} alt={image.alt} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 auto-rows-max">
+            {/* Large featured images */}
+            <ScrollAnimation delay={0}>
+              <div className="col-span-2 row-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-red-black-jerseys-field.jpeg"
+                  alt="Full team photo with players in red and black jerseys on grass field"
+                  className="w-full h-full object-cover aspect-[4/3]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Team Unity</p>
                 </div>
-              </ScrollAnimation>
-            ))}
+              </div>
+            </ScrollAnimation>
+
+            {/* Medium images */}
+            <ScrollAnimation delay={100}>
+              <div className="col-span-1 row-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/ghana-player-portrait.jpeg"
+                  alt="Young player in Ghana national team jersey giving thumbs up"
+                  className="w-full h-full object-cover aspect-[3/4]"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={150}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-yellow-black-thumbs-up.jpeg"
+                  alt="Two players in yellow and black striped jerseys giving thumbs up"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={200}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-celebrating-red-jerseys.jpeg"
+                  alt="Players celebrating on field in red and black jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={250}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/ghana-player-thumbs-up.jpeg"
+                  alt="Young player in red Ghana jersey with thumbs up"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Wide panoramic image - adjusted for 3 columns */}
+            <ScrollAnimation delay={300}>
+              <div className="col-span-3 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/ghana-team-training-run.jpeg"
+                  alt="Group of players in red Ghana jerseys running during training"
+                  className="w-full h-full object-cover aspect-[5/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Training Excellence</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Coaching moment - adjusted for 3 columns */}
+            <ScrollAnimation delay={350}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/coach-player-discussion.jpeg"
+                  alt="Coach in blue tracksuit discussing with player in yellow jersey"
+                  className="w-full h-full object-cover aspect-[3/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Mentorship</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Smaller accent images */}
+            <ScrollAnimation delay={400}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-red-jerseys-dirt-field.jpeg"
+                  alt="Team photo with players in red jerseys on dirt field"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={450}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-teal-jerseys-break.jpeg"
+                  alt="Players in teal jerseys taking a break during training"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={500}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/academy-players-different-jerseys.jpeg"
+                  alt="Academy players in different team jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Community moment - adjusted for 3 columns */}
+            <ScrollAnimation delay={550}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/player-woman-stadium-seats.jpeg"
+                  alt="Player in yellow Ghana jersey with woman in stadium seats"
+                  className="w-full h-full object-cover aspect-[5/3]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Community</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Continue with remaining photos in 3-column layout */}
+            <ScrollAnimation delay={600}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/night-match-celebration.jpeg"
+                  alt="Player celebrating during night match"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={650}>
+              <div className="col-span-3 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/large-group-academy-photo.jpeg"
+                  alt="Large group photo of academy players"
+                  className="w-full h-full object-cover aspect-[5/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Academy Family</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Adding back more original photos in 3-column layout */}
+            <ScrollAnimation delay={700}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-photo-red-jerseys.jpeg"
+                  alt="Team photo with players in red jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={750}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-bench-orange-jerseys.jpeg"
+                  alt="Players on bench in orange jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={800}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-yellow-black-jerseys.jpeg"
+                  alt="Players in yellow and black jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={850}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/young-girl-player.jpeg"
+                  alt="Young female player in academy jersey"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={900}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-white-jerseys-training.jpeg"
+                  alt="Players in white jerseys during training"
+                  className="w-full h-full object-cover aspect-[3/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Training Session</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={950}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-stadium-seats.jpeg"
+                  alt="Players and staff in colorful stadium seats"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={1000}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/night-celebration-victory.jpeg"
+                  alt="Night celebration victory moment"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={1050}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-black-white-jerseys.jpeg"
+                  alt="Team in black and white striped jerseys"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={1100}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/ghana-football-association-event.jpeg"
+                  alt="Ghana Football Association event"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={1150}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/goalkeeper-training-session.jpeg"
+                  alt="Goalkeeper during training session"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
           </div>
+        </div>
+      </section>
+
+      {/* Socials Section */}
+      <section id="socials" className="py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Follow Our Journey</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Stay connected with Jos City Soccer Academy through our social media channels and access our training
+                resources.
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="flex justify-center items-center gap-8 md:gap-12">
+            <ScrollAnimation delay={100}>
+              <a
+                href="https://youtube.com/@JosephAddo-qm4hp?si=38psFBBmCOa0ui0L"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center space-y-4 p-6 rounded-lg hover:bg-primary/5 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Youtube className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-card-foreground group-hover:text-primary transition-colors">YouTube</h3>
+                  <p className="text-sm text-muted-foreground">Training Videos</p>
+                </div>
+              </a>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={200}>
+              <a
+                href="https://www.tiktok.com/@joeaddai7/video/7486533495741877509?_r=1&u_code=e6gg36kacfac77&preview_pb=0&sharer_language=en&_d=e6gg2dakhb9dal&share_item_id=7486533495741877509&source=h5_m&timestamp=1756765532&utm_source=whatsapp&tt_from=whatsapp&enable_checksum=1&utm_medium=ios&share_link_id=15F4F62A-1F5B-427A-88FA-D71D3EB98DEA&user_id=7203910536991032326&sec_user_id=MS4wLjABAAAAPiE6BIez0KkQAqAN4rY2xa3uiwWUbwmpwkXIB7hROOranlAKQNQlrxbRa7zrSRM_&social_share_type=0&ug_btm=b8727,b2878&utm_campaign=client_share&link_reflow_popup_iteration_sharer=%7B%22dynamic_cover%22:1,%22click_empty_to_play%22:1,%22profile_clickable%22:1,%22follow_to_play_duration%22:-1%7D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center space-y-4 p-6 rounded-lg hover:bg-accent/5 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Video className="h-8 w-8 text-accent group-hover:text-white transition-colors" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-card-foreground group-hover:text-accent transition-colors">TikTok</h3>
+                  <p className="text-sm text-muted-foreground">Daily Highlights</p>
+                </div>
+              </a>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={300}>
+              <a
+                href="https://www.dropbox.com/scl/fi/4fiivrjmruyw75n8z0noi/ALFC-U17S-VS-MALIBU-FC-17.06.23.m4v?dl=0&rlkey=x26zm9j3e3ay4rxg8xjxcs0g9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center space-y-4 p-6 rounded-lg hover:bg-primary/5 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Cloud className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-card-foreground group-hover:text-primary transition-colors">Dropbox</h3>
+                  <p className="text-sm text-muted-foreground">Resources & Files</p>
+                </div>
+              </a>
+            </ScrollAnimation>
+          </div>
+
+          <ScrollAnimation delay={400}>
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground text-pretty max-w-xl mx-auto">
+                Follow us for exclusive behind-the-scenes content, training tips, match highlights, and academy updates
+                from Ghana's premier soccer academy.
+              </p>
+            </div>
+          </ScrollAnimation>
         </div>
       </section>
 
@@ -445,7 +770,7 @@ export default function HomePage() {
                     <Phone className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Phone</h4>
-                      <p className="text-muted-foreground">+233 201 000 109</p>
+                      <p className="text-muted-foreground">+233 24 123 4567</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -459,9 +784,8 @@ export default function HomePage() {
                     <Clock className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Training Hours</h4>
-                      <p className="text-muted-foreground">Teusday-Friday:</p>
-                      <p className="text-muted-foreground"> Morning 6:00AM - 10:00 AM</p>
-                      <p className="text-muted-foreground">Evening 3:00PM - 6:00PM</p>
+                      <p className="text-muted-foreground">Mon-Fri: 4:00 PM - 8:00 PM</p>
+                      <p className="text-muted-foreground">Sat-Sun: 8:00 AM - 6:00 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -515,61 +839,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Socials Section - NEW */}
-      <section id="socials" className="py-12 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Connect With Us</h2>
-          <div className="flex justify-center gap-8 flex-wrap">
-            <a
-              href="https://youtube.com/@JosephAddo-qm4hp?si=38psFBBmCOa0ui0L"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="YouTube"
-            >
-              <Youtube className="w-10 h-10" />
-            </a>
-            <a
-              href="https://www.facebook.com/share/16vMMehBej/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Facebook"
-            >
-              <Facebook className="w-10 h-10" />
-            </a>
-            <a
-              href="https://www.tiktok.com/@joeaddai7/video/7486533495741877509?_r=1&u_code=e6gg36kacfac77&preview_pb=0&sharer_language=en&_d=e6gg2dakhb9dal&share_item_id=7486533495741877509&source=h5_m&timestamp=1756765532&utm_source=whatsapp&tt_from=whatsapp&enable_checksum=1&utm_medium=ios&share_link_id=15F4F62A-1F5B-427A-88FA-D71D3EB98DEA&user_id=7203910536991032326&sec_user_id=MS4wLjABAAAAPiE6BIez0KkQAqAN4rY2xa3uiwWUbwmpwkXIB7hROOranlAKQNQlrxbRa7zrSRM_&social_share_type=0&ug_btm=b8727,b2878&utm_campaign=client_share&link_reflow_popup_iteration_sharer=%7B%22dynamic_cover%22:1,%22click_empty_to_play%22:1,%22profile_clickable%22:1,%22follow_to_play_duration%22:-1%7D&share_app_id=1233"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="TikTok"
-            >
-              <TikTokIcon className="w-10 h-10" />
-            </a>
-            <a
-              href="https://www.instagram.com/reel/DNobKs9oeNy/?igsh=MTZqcDdhb2JyaW1iaA=="
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Instagram"
-            >
-              <Instagram className="w-10 h-10" />
-            </a>
-            <a
-              href="https://www.dropbox.com/scl/fi/4fiivrjmruyw75n8z0noi/ALFC-U17S-VS-MALIBU-FC-17.06.23.m4v?dl=0&rlkey=x26zm9j3e3ay4rxg8xjxcs0g9"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-primary transition-colors"
-              aria-label="Dropbox"
-            >
-              <Dropbox className="w-10 h-10" />
-            </a>
-          </div>
-        </div>
-      </section>
-
 
       {/* Footer */}
       <footer className="bg-foreground text-background py-12">
@@ -639,7 +908,7 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm text-background/80">
                 <li>Adenta Amrahia, Accra</li>
                 <li>Ghana, West Africa</li>
-                <li>+233 201 000 109</li>
+                <li>+233 24 123 4567</li>
                 <li>info@joscitysoccer.com</li>
               </ul>
             </div>
