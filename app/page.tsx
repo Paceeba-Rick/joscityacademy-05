@@ -894,22 +894,23 @@ export default function HomePage() {
                     <Phone className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Phone</h4>
-                      <p className="text-muted-foreground">+233 24 123 4567</p>
+                      <p className="text-muted-foreground">+233 201 000 109</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Mail className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Email</h4>
-                      <p className="text-muted-foreground">info@joscitysoccer.com</p>
+                      <p className="text-muted-foreground">info.joscitysoccer@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <Clock className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Training Hours</h4>
-                      <p className="text-muted-foreground">Mon-Fri: 4:00 PM - 8:00 PM</p>
-                      <p className="text-muted-foreground">Sat-Sun: 8:00 AM - 6:00 PM</p>
+                      <p className="text-muted-foreground">Teu-Fri
+                      <p className="text-muted-foreground">Morning: 6:00 AM - 10:00 AM</p>
+                      <p className="text-muted-foreground">Evening: 3:00 PM - 6:00 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
