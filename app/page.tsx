@@ -23,6 +23,8 @@ import {
   Youtube,
   Video,
   Cloud,
+  Facebook,
+  Instagram,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -66,7 +68,7 @@ export default function HomePage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="metallic-gold-button text-lg px-8 py-3 hover:metallic-gold-button"
+                className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-3"
                 onClick={() => scrollToSection("contact")}
               >
                 Start Your Journey
@@ -348,6 +350,14 @@ export default function HomePage() {
                 credentials: "Specialist in sports marketing and community engagement",
                 image: "/owen-abrefa-busia.png", // Updated to use new professional headshot
               },
+              {
+                name: "Dauda Jawara (Giovanni Trapattoni)",
+                role: "Head Coach",
+                experience: "CAF/UEFA Licensed Coach",
+                credentials:
+                  "Former head coach Real Madrid Foundation Egypt, El Gouna Egypt, Al Bairat club Luxor Egypt",
+                image: "/coach-dauda-jawara.jpeg",
+              },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
                 <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
@@ -397,6 +407,20 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
+            <ScrollAnimation delay={50}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/young-girls-ac-milan-jerseys.jpeg"
+                  alt="Two young girls in AC Milan jerseys showcasing female participation"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Future Stars</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
             {/* Medium images */}
             <ScrollAnimation delay={100}>
               <div className="col-span-1 row-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
@@ -420,6 +444,20 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
+            <ScrollAnimation delay={175}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/players-different-jerseys-thumbs-up.jpeg"
+                  alt="Players in different team jerseys giving thumbs up"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Team Spirit</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
             <ScrollAnimation delay={200}>
               <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
                 <img
@@ -428,6 +466,20 @@ export default function HomePage() {
                   className="w-full h-full object-cover aspect-square"
                 />
                 <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={225}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/goalkeeper-ghana-jersey-portrait.jpeg"
+                  alt="Young goalkeeper in Ghana national team jersey on dirt field"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Goalkeeper Training</p>
+                </div>
               </div>
             </ScrollAnimation>
 
@@ -457,8 +509,36 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
+            <ScrollAnimation delay={325}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-red-checkered-jerseys.jpeg"
+                  alt="Team photo with players in red and black checkered jerseys"
+                  className="w-full h-full object-cover aspect-[3/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Academy Squad</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
             {/* Coaching moment - adjusted for 3 columns */}
             <ScrollAnimation delay={350}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/coach-player-mentorship-moment.jpeg"
+                  alt="Coach in blue tracksuit mentoring player in yellow jersey"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Mentorship</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={375}>
               <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
                 <img
                   src="/coach-player-discussion.jpeg"
@@ -467,7 +547,7 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-sm font-medium">Mentorship</p>
+                  <p className="text-sm font-medium">Coaching Excellence</p>
                 </div>
               </div>
             </ScrollAnimation>
@@ -677,7 +757,9 @@ export default function HomePage() {
             </div>
           </ScrollAnimation>
 
-          <div className="flex justify-center items-center gap-8 md:gap-12">
+          <div className="flex justify-center items-center gap-8 md:gap-12 flex-wrap">
+            {" "}
+            {/* Added flex-wrap for better mobile layout */}
             <ScrollAnimation delay={100}>
               <a
                 href="https://youtube.com/@JosephAddo-qm4hp?si=38psFBBmCOa0ui0L"
@@ -694,8 +776,49 @@ export default function HomePage() {
                 </div>
               </a>
             </ScrollAnimation>
-
+            <ScrollAnimation delay={150}>
+              {" "}
+              {/* Added Facebook social media link */}
+              <a
+                href="https://www.facebook.com/share/16vMMehBej/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center space-y-4 p-6 rounded-lg hover:bg-primary/5 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Facebook className="h-8 w-8 text-primary group-hover:text-white transition-colors" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-card-foreground group-hover:text-primary transition-colors">
+                    Facebook
+                  </h3>
+                  <p className="text-sm text-muted-foreground">Updates & News</p>
+                </div>
+              </a>
+            </ScrollAnimation>
             <ScrollAnimation delay={200}>
+              {" "}
+              {/* Updated delay for Instagram */}
+              <a
+                href="https://www.instagram.com/reel/DNobKs9oeNy/?igsh=MTZqcDdhb2JyaW1iaA=="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex flex-col items-center space-y-4 p-6 rounded-lg hover:bg-accent/5 transition-all duration-300"
+              >
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
+                  <Instagram className="h-8 w-8 text-accent group-hover:text-white transition-colors" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-bold text-card-foreground group-hover:text-accent transition-colors">
+                    Instagram
+                  </h3>
+                  <p className="text-sm text-muted-foreground">Behind the Scenes</p>
+                </div>
+              </a>
+            </ScrollAnimation>
+            <ScrollAnimation delay={250}>
+              {" "}
+              {/* Updated delay for TikTok */}
               <a
                 href="https://www.tiktok.com/@joeaddai7/video/7486533495741877509?_r=1&u_code=e6gg36kacfac77&preview_pb=0&sharer_language=en&_d=e6gg2dakhb9dal&share_item_id=7486533495741877509&source=h5_m&timestamp=1756765532&utm_source=whatsapp&tt_from=whatsapp&enable_checksum=1&utm_medium=ios&share_link_id=15F4F62A-1F5B-427A-88FA-D71D3EB98DEA&user_id=7203910536991032326&sec_user_id=MS4wLjABAAAAPiE6BIez0KkQAqAN4rY2xa3uiwWUbwmpwkXIB7hROOranlAKQNQlrxbRa7zrSRM_&social_share_type=0&ug_btm=b8727,b2878&utm_campaign=client_share&link_reflow_popup_iteration_sharer=%7B%22dynamic_cover%22:1,%22click_empty_to_play%22:1,%22profile_clickable%22:1,%22follow_to_play_duration%22:-1%7D"
                 target="_blank"
@@ -711,8 +834,9 @@ export default function HomePage() {
                 </div>
               </a>
             </ScrollAnimation>
-
             <ScrollAnimation delay={300}>
+              {" "}
+              {/* Updated delay for Dropbox */}
               <a
                 href="https://www.dropbox.com/scl/fi/4fiivrjmruyw75n8z0noi/ALFC-U17S-VS-MALIBU-FC-17.06.23.m4v?dl=0&rlkey=x26zm9j3e3ay4rxg8xjxcs0g9"
                 target="_blank"
@@ -829,7 +953,7 @@ export default function HomePage() {
                       className="bg-input"
                       rows={4}
                     />
-                    <Button className="w-full bg-primary hover:bg-primary/90 text-lg py-3">
+                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3">
                       Register for Training
                     </Button>
                   </form>
