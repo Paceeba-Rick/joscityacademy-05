@@ -8,6 +8,21 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { Trophy, Users, Target, Star, MapPin, Phone, Mail, Clock, Award, Shield, Heart, Zap } from "lucide-react"
+import { Youtube, Facebook, Instagram, Dropbox, Globe } from "lucide-react"
+
+// SVG for TikTok icon (since Lucide doesn't have it)
+const TikTokIcon = (props: React.ComponentProps<'svg'>) => (
+  <svg
+    width={props.width || 24}
+    height={props.height || 24}
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-label="TikTok"
+    {...props}
+  >
+    <path d="M17.5 2c.3 3.1 2.4 5.4 5.5 5.7v3c-2.2 0-4.3-.7-6-2v7.8c0 4-3.2 7.2-7.2 7.2S2.6 20.5 2.6 16.5c0-4 3.2-7.2 7.2-7.2h.4v3h-.4c-2.4 0-4.2 1.9-4.2 4.2s1.9 4.2 4.2 4.2 4.2-1.9 4.2-4.2V2h3z"/>
+  </svg>
+)
 
 export default function HomePage() {
   const scrollToSection = (sectionId: string) => {
