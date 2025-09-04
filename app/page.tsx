@@ -516,6 +516,61 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Socials Section - NEW */}
+      <section id="socials" className="py-12 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-6">Connect With Us</h2>
+          <div className="flex justify-center gap-8 flex-wrap">
+            <a
+              href="https://youtube.com/@JosephAddo-qm4hp?si=38psFBBmCOa0ui0L"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="YouTube"
+            >
+              <Youtube className="w-10 h-10" />
+            </a>
+            <a
+              href="https://www.facebook.com/share/16vMMehBej/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="Facebook"
+            >
+              <Facebook className="w-10 h-10" />
+            </a>
+            <a
+              href="https://www.tiktok.com/@joeaddai7/video/7486533495741877509?_r=1&u_code=e6gg36kacfac77&preview_pb=0&sharer_language=en&_d=e6gg2dakhb9dal&share_item_id=7486533495741877509&source=h5_m&timestamp=1756765532&utm_source=whatsapp&tt_from=whatsapp&enable_checksum=1&utm_medium=ios&share_link_id=15F4F62A-1F5B-427A-88FA-D71D3EB98DEA&user_id=7203910536991032326&sec_user_id=MS4wLjABAAAAPiE6BIez0KkQAqAN4rY2xa3uiwWUbwmpwkXIB7hROOranlAKQNQlrxbRa7zrSRM_&social_share_type=0&ug_btm=b8727,b2878&utm_campaign=client_share&link_reflow_popup_iteration_sharer=%7B%22dynamic_cover%22:1,%22click_empty_to_play%22:1,%22profile_clickable%22:1,%22follow_to_play_duration%22:-1%7D&share_app_id=1233"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="TikTok"
+            >
+              <TikTokIcon className="w-10 h-10" />
+            </a>
+            <a
+              href="https://www.instagram.com/reel/DNobKs9oeNy/?igsh=MTZqcDdhb2JyaW1iaA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="Instagram"
+            >
+              <Instagram className="w-10 h-10" />
+            </a>
+            <a
+              href="https://www.dropbox.com/scl/fi/4fiivrjmruyw75n8z0noi/ALFC-U17S-VS-MALIBU-FC-17.06.23.m4v?dl=0&rlkey=x26zm9j3e3ay4rxg8xjxcs0g9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary transition-colors"
+              aria-label="Dropbox"
+            >
+              <Dropbox className="w-10 h-10" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+
       {/* Footer */}
       <footer className="bg-foreground text-background py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
