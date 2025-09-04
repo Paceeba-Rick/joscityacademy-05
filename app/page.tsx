@@ -908,9 +908,8 @@ export default function HomePage() {
                     <Clock className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Training Hours</h4>
-                      <p className="text-muted-foreground">Teu-Fri
-                      <p className="text-muted-foreground">Morning: 6:00 AM - 10:00 AM</p>
-                      <p className="text-muted-foreground">Evening: 3:00 PM - 6:00 PM</p>
+                      <p className="text-muted-foreground">Tue-Fri: 6:00 AM - 10:00 AM</p>
+                      <p className="text-muted-foreground">Tue-Fri: 3:00 PM - 6:00 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -1033,8 +1032,8 @@ export default function HomePage() {
               <ul className="space-y-2 text-sm text-background/80">
                 <li>Adenta Amrahia, Accra</li>
                 <li>Ghana, West Africa</li>
-                <li>+233 24 123 4567</li>
-                <li>info@joscitysoccer.com</li>
+                <li>+233 201 000 109</li>
+                <li>info.joscitysoccer@gmail.com</li>
               </ul>
             </div>
           </div>
