@@ -56,12 +56,14 @@ export function SinglePageNavigation() {
           <div className="flex items-center space-x-3">
             <Image
               src="/jos-city-logo.jpeg"
-              alt="Jos City Soccer Academy Logo"
+              alt="JOS CITY SOCCER ACADEMY Logo"
               width={40}
               height={40}
               className="rounded-sm"
             />
-            <span className="font-bold text-lg text-foreground">Jos City Soccer Academy</span>
+            <span className="font-bold text-lg text-foreground">
+              <strong>JOS CITY SOCCER ACADEMY</strong>
+            </span>
           </div>
 
           {/* Desktop Navigation */}

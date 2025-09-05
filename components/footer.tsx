@@ -18,8 +18,8 @@ export function Footer() {
               <span className="font-bold text-xl">Jos City Soccer</span>
             </div>
             <p className="text-secondary-foreground/80 leading-relaxed">
-              Building champions on and off the field through professional soccer training, character development, and a
-              commitment to excellence.
+              Building champions on and off the field through professional soccer training,{" "}
+              <strong>character development</strong>, and a commitment to excellence.
             </p>
             <div className="flex space-x-4">
               <Button size="sm" variant="ghost" className="p-2 hover:bg-secondary-foreground/10">
@@ -207,7 +207,7 @@ export function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-secondary-foreground/80 text-sm">
-              © 2024 Jos City Soccer Academy. All rights reserved.
+              © 2024 JOS CITY SOCCER ACADEMY. All rights reserved.
             </div>
             <div className="flex space-x-6 text-sm">
               <Link href="#" className="text-secondary-foreground/80 hover:text-secondary-foreground transition-colors">

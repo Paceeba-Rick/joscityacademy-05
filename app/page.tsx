@@ -55,7 +55,7 @@ export default function HomePage() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              Jos City Soccer <span className="metallic-gold-text">Academy</span>
+              JOS CITY SOCCER <span className="metallic-gold-text">ACADEMY</span>
             </h1>
           </ScrollAnimation>
           <ScrollAnimation delay={200}>
@@ -76,7 +76,7 @@ export default function HomePage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-3 bg-accent/10 border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                className="text-lg px-8 py-3 bg-white/10 border-foreground text-foreground hover:bg-foreground hover:text-background"
                 onClick={() => scrollToSection("gallery")}
               >
                 Watch Our Story
@@ -113,14 +113,14 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <ScrollAnimation>
               <div>
-                <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-6">
-                  From Malibu FC to Jos City Soccer Academy
+                <h2 className="text-3xl font-bold text-foreground mb-4 text-balance">
+                  From Malibu FC to <strong>JOS CITY SOCCER ACADEMY</strong>
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6 text-pretty">
-                  Founded in 2020 as Malibu FC and rebranded to Jos City Soccer Academy in 2025, we are located in
-                  Adenta Amrahia, Accra, Ghana. Our academy provides comprehensive soccer training for young athletes
-                  aged 10-20 years, with accommodation facilities and field-based learning that focuses on practical
-                  skills development.
+                  Founded in 2020 as Malibu FC and rebranded to <strong>JOS CITY SOCCER ACADEMY</strong> in 2025, we are
+                  located in Adenta Amrahia, Accra, Ghana. Our academy provides comprehensive soccer training for young
+                  athletes aged 10-20 years, with accommodation facilities and field-based learning that focuses on
+                  practical skills development.
                 </p>
                 <p className="text-lg text-muted-foreground mb-6 text-pretty">
                   Under the leadership of CEO Mr. Joseph Addai, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
@@ -154,7 +154,7 @@ export default function HomePage() {
               <div className="relative">
                 <img
                   src="/rebrand-team-group-photo.jpeg"
-                  alt="Jos City Soccer Academy team group photo showing players in yellow and white jerseys"
+                  alt="JOS CITY SOCCER ACADEMY team group photo showing players in yellow and white jerseys"
                   className="rounded-lg shadow-lg w-full"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground p-6 rounded-lg shadow-lg">
@@ -262,8 +262,8 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Official Academy Kit</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Our professional light blue uniform represents the pride and identity of Jos City Soccer Academy, worn
-                by all our players across different age categories.
+                Our professional light blue uniform represents the pride and identity of
+                <strong> JOS CITY SOCCER ACADEMY</strong>, worn by all our players across different age categories.
               </p>
             </div>
           </ScrollAnimation>
@@ -321,8 +321,8 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Our Leadership Team</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Meet the dedicated leadership team behind Jos City Soccer Academy's success and growth in Ghana's soccer
-                development landscape.
+                Meet the dedicated leadership team behind <strong>JOS CITY SOCCER ACADEMY</strong>'s success and growth
+                in Ghana's soccer development landscape.
               </p>
             </div>
           </ScrollAnimation>
@@ -767,8 +767,8 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Follow Our Journey</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Stay connected with Jos City Soccer Academy through our social media channels and access our training
-                resources.
+                Stay connected with <strong>JOS CITY SOCCER ACADEMY</strong> through our social media channels and
+                access our training resources.
               </p>
             </div>
           </ScrollAnimation>
@@ -945,7 +945,7 @@ export default function HomePage() {
           <ScrollAnimation delay={0.4}>
             <div className="text-center mt-12">
               <p className="text-muted-foreground">
-                Interested in partnering with Jos City Soccer Academy?
+                Interested in partnering with <strong>JOS CITY SOCCER ACADEMY</strong>?
                 <a href="mailto:info.joscitysoccer@gmail.com" className="text-primary hover:underline ml-1">
                   Contact us
                 </a>
@@ -963,7 +963,7 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Join Our Academy</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
                 Ready to start your soccer journey in Ghana's premier academy? Get in touch with us today and become
-                part of the Jos City Soccer Academy family.
+                part of the <strong>JOS CITY SOCCER ACADEMY</strong> family.
               </p>
             </div>
           </ScrollAnimation>
@@ -985,6 +985,8 @@ export default function HomePage() {
                     <div>
                       <h4 className="font-medium text-card-foreground">Phone</h4>
                       <p className="text-muted-foreground">+233 201 000 109</p>
+                      <p className="text-muted-foreground">+233 244 223 047</p>
+                      <p className="text-muted-foreground">+233 243 974 062</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -998,8 +1000,9 @@ export default function HomePage() {
                     <Clock className="h-6 w-6 text-primary mt-1" />
                     <div>
                       <h4 className="font-medium text-card-foreground">Training Hours</h4>
-                      <p className="text-muted-foreground">Tue-Fri: 6:00 AM - 10:00 AM</p>
-                      <p className="text-muted-foreground">Tue-Fri: 3:00 PM - 6:00 PM</p>
+                      <p className="text-muted-foreground">Tue-Fri:</p>
+                      <p className="text-muted-foreground">Morning: 6:00 AM - 10:00 AM</p>
+                      <p className="text-muted-foreground">Evening: 3:00 PM - 6:00 PM</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -1060,7 +1063,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <img src="/jos-city-logo.jpeg" alt="Jos City Soccer Academy Logo" className="w-8 h-8 object-contain" />
+                <img src="/jos-city-logo.jpeg" alt="JOS CITY SOCCER ACADEMY Logo" className="w-8 h-8 object-contain" />
                 <span className="font-bold text-lg">Jos City Soccer</span>
               </div>
               <p className="text-sm text-background/80 text-pretty">
@@ -1123,12 +1126,15 @@ export default function HomePage() {
                 <li>Adenta Amrahia, Accra</li>
                 <li>Ghana, West Africa</li>
                 <li>+233 201 000 109</li>
+                <li>+233 244 223 047</li>
                 <li>info.joscitysoccer@gmail.com</li>
               </ul>
             </div>
           </div>
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
-            <p>&copy; 2025 Jos City Soccer Academy. All rights reserved.</p>
+            <p>
+              &copy; 2025 <strong>JOS CITY SOCCER ACADEMY</strong>. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
