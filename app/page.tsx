@@ -51,7 +51,7 @@ export default function HomePage() {
         id="home"
         className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10"
       >
-        <div className="absolute inset-0 bg-[url('/soccer-field-aerial.png')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-20"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
@@ -91,7 +91,7 @@ export default function HomePage() {
                 <div className="text-muted-foreground">Active Players</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary">8+</div>
+                <div className="text-3xl md:text-4xl font-bold text-primary">5+</div>
                 <div className="text-muted-foreground">Expert Coaches</div>
               </div>
               <div className="text-center">
@@ -368,7 +368,7 @@ export default function HomePage() {
               },
               {
                 name: "Kwadwo Ohene Samba",
-                role: "Assistant Coach",
+                role: "Coach",
                 experience: "Youth Development Specialist",
                 credentials:
                   "Former player for Okwawu United Bright Future. Dedicated to nurturing young talent and technical skill development",
@@ -408,22 +408,112 @@ export default function HomePage() {
           </ScrollAnimation>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 auto-rows-max">
-            {/* Large featured images */}
+            {/* International coaching excellence - featured prominently */}
             <ScrollAnimation delay={0}>
               <div className="col-span-2 row-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
                 <img
-                  src="/team-red-black-jerseys-field.jpeg"
-                  alt="Full team photo with players in red and black jerseys on grass field"
+                  src="/international-coach-training.jpeg"
+                  alt="International coach training young player with agility cones on grass field"
                   className="w-full h-full object-cover aspect-[4/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">International Coaching Standards</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Full team lineup - showcasing squad depth */}
+            <ScrollAnimation delay={50}>
+              <div className="col-span-1 row-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/full-team-lineup-photo.jpeg"
+                  alt="Complete team lineup in black and gold jerseys with goalkeeper in blue"
+                  className="w-full h-full object-cover aspect-[3/4]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Full Squad</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Team celebration moment */}
+            <ScrollAnimation delay={100}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/team-celebration-huddle.jpeg"
+                  alt="Players in team celebration huddle on artificial turf"
+                  className="w-full h-full object-cover aspect-[3/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <p className="text-sm font-medium">Team Unity</p>
                 </div>
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation delay={50}>
+            {/* Individual player development */}
+            <ScrollAnimation delay={150}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/individual-player-portrait.jpeg"
+                  alt="Young player in black and gold academy jersey on field"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Rising Talent</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Match day preparations - wide format */}
+            <ScrollAnimation delay={200}>
+              <div className="col-span-3 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/match-day-entrance.jpeg"
+                  alt="Players walking onto field in various team jerseys for match preparation"
+                  className="w-full h-full object-cover aspect-[5/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Match Day Excellence</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Coaching staff leadership */}
+            <ScrollAnimation delay={250}>
+              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/coaching-staff-group.jpeg"
+                  alt="Coaching staff group photo on artificial turf field under blue sky"
+                  className="w-full h-full object-cover aspect-[3/2]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Leadership Team</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Community engagement */}
+            <ScrollAnimation delay={300}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/community-coaching-ghana.jpeg"
+                  alt="Community coaches in Ghana national team jerseys with MAN-UP caps"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Community Outreach</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={350}>
               <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
                 <img
                   src="/young-girls-ac-milan-jerseys.jpeg"
