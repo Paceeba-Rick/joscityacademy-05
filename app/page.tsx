@@ -1223,11 +1223,6 @@ export default function HomePage() {
           </div>
           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
             <p>
-             Developer - <strong>Ceeba</strong> (0594473819)
-            </p>
-          </div>
-          <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
-            <p>
               &copy; 2025 <strong>JOS CITY SOCCER ACADEMY</strong>. All rights reserved.
             </p>
           </div>
