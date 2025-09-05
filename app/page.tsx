@@ -333,7 +333,8 @@ export default function HomePage() {
                 name: "Mr. Joseph Addai",
                 role: "Chief Executive Officer",
                 experience: "Businessman & Academy Founder",
-                credentials: "Visionary leader driving soccer development in Ghana",
+                credentials:
+                  "Visionary leader driving soccer development in Ghana. Member of African Football Agent Association",
                 image: "/joseph-addai.jpeg",
               },
               {
@@ -348,7 +349,14 @@ export default function HomePage() {
                 role: "Head of Marketing",
                 experience: "Marketing & Community Outreach",
                 credentials: "Specialist in sports marketing and community engagement",
-                image: "/owen-abrefa-busia.png", // Updated to use new professional headshot
+                image: "/owen-abrefa-busia-new.jpeg",
+              },
+              {
+                name: "Mr. Daniel Osei Bonsu",
+                role: "Administrator",
+                experience: "Operations & Administrative Management",
+                credentials: "Overseeing academy operations and administrative excellence",
+                image: "/administrator-daniel-osei-bonsu.jpeg",
               },
               {
                 name: "Dauda Jawara (Giovanni Trapattoni)",
@@ -358,6 +366,14 @@ export default function HomePage() {
                   "Former head coach Real Madrid Foundation Egypt, El Gouna Egypt, Al Bairat club Luxor Egypt",
                 image: "/coach-dauda-jawara.jpeg",
               },
+              {
+                name: "Kwadwo Ohene Samba",
+                role: "Assistant Coach",
+                experience: "Youth Development Specialist",
+                credentials:
+                  "Former player for Okwawu United Bright Future. Dedicated to nurturing young talent and technical skill development",
+                image: "/coach-kwadwo-ohene-samba.jpeg",
+              },
             ].map((leader, index) => (
               <ScrollAnimation key={leader.name} delay={index * 100}>
                 <Card className="text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
@@ -365,7 +381,7 @@ export default function HomePage() {
                     <img
                       src={leader.image || "/placeholder.svg"}
                       alt={leader.name}
-                      className="w-32 h-32 rounded-full mx-auto mb-4 object-cover object-top" // Added object-top to position image from top, ensuring hair is visible
+                      className="w-40 h-40 rounded-full mx-auto mb-4 object-cover object-top"
                     />
                     <h3 className="text-xl font-bold text-card-foreground mb-1">{leader.name}</h3>
                     <p className="text-accent font-medium mb-2">{leader.role}</p>
@@ -878,21 +894,50 @@ export default function HomePage() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-items-center">
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
                 <img
                   src="/sponsor-ebisbank.jpeg"
                   alt="EBISBANK - Financial Partner"
-                  className="w-full h-20 object-contain"
+                  className="w-full h-16 object-contain mb-3"
                 />
+                <p className="text-sm font-medium text-gray-700">EBISBANK</p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
-                <img src="/sponsor-stp.jpeg" alt="STP - Technology Partner" className="w-full h-20 object-contain" />
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-stp.jpeg"
+                  alt="Stipps Pharmacy - Healthcare Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">Stipps Pharmacy</p>
               </div>
 
-              <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs">
-                <img src="/sponsor-eyeball.jpeg" alt="EYEBALL - Media Partner" className="w-full h-20 object-contain" />
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-eyeball.jpeg"
+                  alt="EYEBALL - Media Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">EYEBALL</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-macandy-pharmacy.jpeg"
+                  alt="MACANDY PHARMACY - Healthcare Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">Macandy Pharmacy</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-star-kleo.jpeg"
+                  alt="STAR KLEO - Premium Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">Star Kleo</p>
               </div>
             </div>
           </ScrollAnimation>
