@@ -59,7 +59,7 @@ export default function HomePage() {
             </h1>
           </ScrollAnimation>
           <ScrollAnimation delay={200}>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto text-pretty">
+            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto text-pretty">
               Developing champions on and off the field through professional training, character building, and a passion
               for excellence. Located in the heart of Accra, Ghana.
             </p>
@@ -88,19 +88,19 @@ export default function HomePage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-accent">150+</div>
-                <div className="text-muted-foreground">Active Players</div>
+                <div className="text-foreground">Active Players</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary">5+</div>
-                <div className="text-muted-foreground">Expert Coaches</div>
+                <div className="text-foreground">Expert Coaches</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-accent">5</div>
-                <div className="text-muted-foreground">Age Categories</div>
+                <div className="text-foreground">Age Categories</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-primary">5</div>
-                <div className="text-muted-foreground">Years Excellence</div>
+                <div className="text-foreground">Years Excellence</div>
               </div>
             </div>
           </ScrollAnimation>
