@@ -356,7 +356,7 @@ export default function HomePage() {
                 role: "Administrator",
                 experience: "Operations & Administrative Management",
                 credentials: "Overseeing academy operations and administrative excellence",
-                image: "/administrator-daniel-osei-bonsu.jpeg",
+                image: "/administrator-daniel-osei-bonsu-new.png",
               },
               {
                 name: "Dauda Jawara (Giovanni Trapattoni)",
