@@ -474,7 +474,7 @@ export default function HomePage() {
                 <img
                   src="/match-day-entrance.jpeg"
                   alt="Players walking onto field in various team jerseys for match preparation"
-                  className="w-full h-full object-cover aspect-[5/2]"
+                  className="w-full h-full object-cover aspect-[3/2]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -606,7 +606,7 @@ export default function HomePage() {
                 <img
                   src="/ghana-team-training-run.jpeg"
                   alt="Group of players in red Ghana jerseys running during training"
-                  className="w-full h-full object-cover aspect-[5/2]"
+                  className="w-full h-full object-cover aspect-[2/2]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -644,19 +644,7 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
-            <ScrollAnimation delay={375}>
-              <div className="col-span-2 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
-                <img
-                  src="/coach-player-discussion.jpeg"
-                  alt="Coach in blue tracksuit discussing with player in yellow jersey"
-                  className="w-full h-full object-cover aspect-[3/2]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="text-sm font-medium">Coaching Excellence</p>
-                </div>
-              </div>
-            </ScrollAnimation>
+            
 
             {/* Smaller accent images */}
             <ScrollAnimation delay={400}>
@@ -698,7 +686,7 @@ export default function HomePage() {
                 <img
                   src="/player-woman-stadium-seats.jpeg"
                   alt="Player in yellow Ghana jersey with woman in stadium seats"
-                  className="w-full h-full object-cover aspect-[5/3]"
+                  className="w-full h-full object-cover aspect-[3/3]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -724,7 +712,7 @@ export default function HomePage() {
                 <img
                   src="/large-group-academy-photo.jpeg"
                   alt="Large group photo of academy players"
-                  className="w-full h-full object-cover aspect-[5/2]"
+                  className="w-full h-full object-cover aspect-[3/2]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
