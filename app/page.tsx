@@ -25,6 +25,7 @@ import {
   Cloud,
   Facebook,
   Instagram,
+  Calendar,
 } from "lucide-react"
 
 export default function HomePage() {
@@ -644,8 +645,6 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
-            
-
             {/* Smaller accent images */}
             <ScrollAnimation delay={400}>
               <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
@@ -838,6 +837,96 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Special Occasions Section */}
+      <section id="occasions" className="py-20 bg-card">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Occasions</h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                Celebrating memorable moments that define our academy's journey and
+                community spirit.
+              </p>
+            </div>
+          </ScrollAnimation>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Competitive Match */}
+            <ScrollAnimation delay={0}>
+              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/competitive-match-action.jpeg"
+                    alt="Competitive Match Action"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">Regional Tournament</h3>
+                  <p className="text-muted-foreground text-pretty mb-4">
+                    Intense match action as our players in signature black and gold jerseys compete against regional
+                    rivals, showcasing the competitive spirit and technical skills developed at{" "}
+                    <strong>JOS CITY SOCCER ACADEMY</strong>.
+                  </p>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>September 2024</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* International Exchange */}
+            <ScrollAnimation delay={100}>
+              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/international-player-exchange-new.jpeg"
+                    alt="International Player Exchange"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">International Friendship</h3>
+                  <p className="text-muted-foreground text-pretty mb-4">
+                    Building global connections as our academy player meets with international visitors, fostering
+                    cultural exchange and expanding opportunities for our talented youth.
+                  </p>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>October 2024</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            {/* Professional Training */}
+            <ScrollAnimation delay={200}>
+              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/professional-training-camp.jpeg"
+                    alt="Professional Training Camp"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">Elite Training Camp</h3>
+                  <p className="text-muted-foreground text-pretty mb-4">
+                    High-level training sessions in professional stadium facilities, where our players experience
+                    elite-level conditioning and tactical development under expert coaching guidance.
+                  </p>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>June 2025</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+          </div>
+        </div>
+      </section>
+
       {/* Socials Section */}
       <section id="socials" className="py-20 bg-card">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -972,7 +1061,7 @@ export default function HomePage() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 items-center justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
                 <img
                   src="/sponsor-ebisbank.jpeg"
@@ -1016,6 +1105,15 @@ export default function HomePage() {
                   className="w-full h-16 object-contain mb-3"
                 />
                 <p className="text-sm font-medium text-gray-700">Star Kleo</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-mudi-africa.jpeg"
+                  alt="MUDI Africa - Strategic Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">MUDI Africa</p>
               </div>
             </div>
           </ScrollAnimation>
@@ -1210,19 +1308,17 @@ export default function HomePage() {
             </div>
           </div>
 
-             <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
+          <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
             <p>
               &copy; 2025 <strong>JOS CITY SOCCER ACADEMY</strong>. All rights reserved.
             </p>
           </div>
 
-           <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
+          <div className="border-t border-background/20 mt-8 pt-8 text-center text-sm text-background/60">
             <p>
-             Developer - <strong>Ceeba</strong> (0594473819)
+              Developer - <strong>Ceeba</strong> (0594473819)
             </p>
           </div>
-
-       
         </div>
       </footer>
     </main>
