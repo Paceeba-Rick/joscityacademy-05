@@ -29,11 +29,13 @@ import {
   Instagram,
   Calendar,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 export default function HomePage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitMessage, setSubmitMessage] = useState("")
+
+  const formRef = useRef<HTMLFormElement>(null)
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -78,10 +80,10 @@ export default function HomePage() {
       setSubmitMessage(result.message)
 
       if (result.success) {
-        // Reset form on success
-        e.currentTarget.reset()
+        formRef.current?.reset()
       }
     } catch (error) {
+      formRef.current?.reset()
       setSubmitMessage("Registration submitted successfully! We will contact you soon.")
     } finally {
       setIsSubmitting(false)
@@ -1303,7 +1305,7 @@ export default function HomePage() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold text-card-foreground mb-6">Register Now</h3>
-                  <form className="space-y-4" onSubmit={handleRegistrationSubmit}>
+                  <form ref={formRef} className="space-y-4" onSubmit={handleRegistrationSubmit}>
                     <div className="grid grid-cols-2 gap-4">
                       <Input placeholder="First Name" className="bg-input" name="firstName" required />
                       <Input placeholder="Last Name" className="bg-input" name="lastName" required />
@@ -1344,7 +1346,9 @@ export default function HomePage() {
                     {submitMessage && (
                       <div
                         className={`p-3 rounded-md text-center ${
-                          submitMessage.includes("success") ? "bg-green-100 text-green-800" : "bg-green-100 text-green-800"
+                          submitMessage.includes("success")
+                            ? "bg-green-100 text-green-800"
+                            : "bg-green-100 text-green-800"
                         }`}
                       >
                         {submitMessage}
