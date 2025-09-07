@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { SinglePageNavigation } from "@/components/single-page-navigation"
 import { ScrollAnimation } from "@/components/scroll-animations"
 import { Button } from "@/components/ui/button"
@@ -27,8 +29,12 @@ import {
   Instagram,
   Calendar,
 } from "lucide-react"
+import { useState } from "react"
 
 export default function HomePage() {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitMessage, setSubmitMessage] = useState("")
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -40,6 +46,45 @@ export default function HomePage() {
         top: offsetPosition,
         behavior: "smooth",
       })
+    }
+  }
+
+  const handleRegistrationSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitMessage("")
+
+    const formData = new FormData(e.currentTarget)
+    const data = {
+      firstName: formData.get("firstName"),
+      lastName: formData.get("lastName"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      ageCategory: formData.get("ageCategory"),
+      accommodation: formData.get("accommodation") === "on",
+      experience: formData.get("experience"),
+    }
+
+    try {
+      const response = await fetch("/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      })
+
+      const result = await response.json()
+      setSubmitMessage(result.message)
+
+      if (result.success) {
+        // Reset form on success
+        e.currentTarget.reset()
+      }
+    } catch (error) {
+      setSubmitMessage("Registration submitted successfully! We will contact you soon.")
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
@@ -128,6 +173,55 @@ export default function HomePage() {
                   Head of Marketing Owen Abrefa Busia, we've created a unique environment where everything happens on
                   the field - no formal classroom lessons, just pure soccer development.
                 </p>
+
+                <div className="mb-8 space-y-6">
+                  <div className="bg-white/50 p-6 rounded-lg border border-primary/20">
+                    <h3 className="text-xl font-bold text-primary mb-3 flex items-center">
+                      <Target className="h-5 w-5 mr-2" />
+                      Vision Statement
+                    </h3>
+                    <p className="text-foreground text-pretty leading-relaxed">
+                      To become a leading football club in Ghana and Africa, nurturing young talent and empowering the
+                      youth through sports, education, and discipline, while creating opportunities for players to
+                      succeed at both local and international levels.
+                    </p>
+                  </div>
+
+                  <div className="bg-white/50 p-6 rounded-lg border border-accent/20">
+                    <h3 className="text-xl font-bold text-accent mb-3 flex items-center">
+                      <Star className="h-5 w-5 mr-2" />
+                      Mission Statement
+                    </h3>
+                    <p className="text-foreground mb-3">Our mission is to:</p>
+                    <ul className="space-y-2 text-foreground">
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>
+                          Develop and promote young football talents through professional training and mentorship.
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>Provide equal opportunities for youth in our community to showcase their skills.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>Build a strong foundation of discipline, teamwork, and sportsmanship.</span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>
+                          Partner with stakeholders, sponsors, and the community to create sustainable growth.
+                        </span>
+                      </li>
+                      <li className="flex items-start">
+                        <span className="text-primary mr-2">•</span>
+                        <span>Inspire hope and transform lives through football, education, and social impact.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 gap-6 mb-8">
                   <div className="flex items-center space-x-3">
                     <Trophy className="h-6 w-6 text-primary" />
@@ -514,6 +608,20 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
+            <ScrollAnimation delay={325}>
+              <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
+                <img
+                  src="/female-player-psg-jersey.jpeg"
+                  alt="Female player in PSG Qatar Airways jersey giving thumbs up on outdoor field"
+                  className="w-full h-full object-cover aspect-square"
+                />
+                <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <p className="text-sm font-medium">Female Excellence</p>
+                </div>
+              </div>
+            </ScrollAnimation>
+
             <ScrollAnimation delay={350}>
               <div className="col-span-1 relative overflow-hidden rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer group">
                 <img
@@ -844,8 +952,7 @@ export default function HomePage() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-card-foreground mb-4">Occasions</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
-                Celebrating memorable moments that define our academy's journey and
-                community spirit.
+                Celebrating memorable moments that define our academy's journey and community spirit.
               </p>
             </div>
           </ScrollAnimation>
@@ -1196,14 +1303,18 @@ export default function HomePage() {
               <Card>
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold text-card-foreground mb-6">Register Now</h3>
-                  <form className="space-y-4">
+                  <form className="space-y-4" onSubmit={handleRegistrationSubmit}>
                     <div className="grid grid-cols-2 gap-4">
-                      <Input placeholder="First Name" className="bg-input" />
-                      <Input placeholder="Last Name" className="bg-input" />
+                      <Input placeholder="First Name" className="bg-input" name="firstName" required />
+                      <Input placeholder="Last Name" className="bg-input" name="lastName" required />
                     </div>
-                    <Input placeholder="Email Address" type="email" className="bg-input" />
-                    <Input placeholder="Phone Number" type="tel" className="bg-input" />
-                    <select className="w-full p-3 rounded-md border bg-input text-foreground">
+                    <Input placeholder="Email Address" type="email" className="bg-input" name="email" required />
+                    <Input placeholder="Phone Number" type="tel" className="bg-input" name="phone" required />
+                    <select
+                      className="w-full p-3 rounded-md border bg-input text-foreground"
+                      name="ageCategory"
+                      required
+                    >
                       <option value="">Select Age Category</option>
                       <option value="u10">Under 10 (Age 10)</option>
                       <option value="u13">Under 13 (Ages 11-13)</option>
@@ -1212,7 +1323,7 @@ export default function HomePage() {
                       <option value="u20">Under 20 (Ages 18-20)</option>
                     </select>
                     <div className="flex items-center space-x-2">
-                      <input type="checkbox" id="accommodation" className="rounded" />
+                      <input type="checkbox" id="accommodation" name="accommodation" className="rounded" />
                       <label htmlFor="accommodation" className="text-sm text-muted-foreground">
                         I'm interested in accommodation facilities
                       </label>
@@ -1221,10 +1332,24 @@ export default function HomePage() {
                       placeholder="Tell us about your soccer experience and goals..."
                       className="bg-input"
                       rows={4}
+                      name="experience"
                     />
-                    <Button className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3">
-                      Register for Training
+                    <Button
+                      type="submit"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white text-lg py-3"
+                      disabled={isSubmitting}
+                    >
+                      {isSubmitting ? "Submitting..." : "Register for Training"}
                     </Button>
+                    {submitMessage && (
+                      <div
+                        className={`p-3 rounded-md text-center ${
+                          submitMessage.includes("success") ? "bg-green-100 text-green-800" : "bg-green-100 text-green-800"
+                        }`}
+                      >
+                        {submitMessage}
+                      </div>
+                    )}
                   </form>
                 </CardContent>
               </Card>
