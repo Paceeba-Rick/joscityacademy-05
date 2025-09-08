@@ -99,59 +99,71 @@ export default function HomePage() {
         id="home"
         className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10"
       >
-        <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-100"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <ScrollAnimation>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground mb-6 text-balance">
-              JOS CITY SOCCER <span className="metallic-gold-text">ACADEMY</span>
-            </h1>
-          </ScrollAnimation>
-          <ScrollAnimation delay={200}>
-            <p className="text-xl md:text-2xl text-foreground mb-8 max-w-3xl mx-auto text-pretty">
-              Developing champions on and off the field through professional training, character building, and a passion
-              for excellence. Located in the heart of Accra, Ghana.
-            </p>
-          </ScrollAnimation>
-          <ScrollAnimation delay={400}>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                size="lg"
-                className="bg-green-600 hover:bg-green-700 text-white text-lg px-8 py-3"
-                onClick={() => scrollToSection("contact")}
+          <div className="backdrop-blur-sm bg-black/1 border border-white/30 rounded-3xl p-8 md:p-12 shadow-2xl">
+            <ScrollAnimation>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance drop-shadow-lg">
+                <strong>JOS CITY SOCCER</strong>{" "}
+                <span className="text-yellow-300 drop-shadow-lg font-extrabold">
+                  <strong>ACADEMY</strong>
+                </span>
+              </h1>
+            </ScrollAnimation>
+            <ScrollAnimation delay={200}>
+              <p
+                className="text-xl md:text-2xl text-white/100 mb-8 max-w-3xl mx-auto text-pretty drop-shadow-md font-medium"
+                style={{
+                  WebkitTextStroke: "0.3px red",
+                  textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black",
+                }}
               >
-                Start Your Journey
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="text-lg px-8 py-3 bg-white/10 border-foreground text-foreground hover:bg-foreground hover:text-background"
-                onClick={() => scrollToSection("gallery")}
-              >
-                Watch Our Story
-              </Button>
-            </div>
-          </ScrollAnimation>
+                Developing champions on and off the field through professional training, character building, and a
+                passion for excellence. Located in the heart of Accra, Ghana.
+              </p>
+            </ScrollAnimation>
+            <ScrollAnimation delay={400}>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-green-600/90 hover:bg-green-700 text-white text-lg px-8 py-3 backdrop-blur-sm border border-white/20 shadow-lg"
+                  onClick={() => scrollToSection("contact")}
+                >
+                  Start Your Journey
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="text-lg px-8 py-3 bg-white/20 border-white/40 text-white hover:bg-white/30 hover:text-white backdrop-blur-sm shadow-lg"
+                  onClick={() => scrollToSection("gallery")}
+                >
+                  Watch Our Story
+                </Button>
+              </div>
+            </ScrollAnimation>
 
-          <ScrollAnimation delay={600}>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-accent">150+</div>
-                <div className="text-foreground">Active Players</div>
+            <ScrollAnimation delay={600}>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                <div className="text-center backdrop-blur-sm bg-black/20 rounded-xl p-4 border border-white/30">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">150+</div>
+                  <div className="text-white/90 font-medium">Active Players</div>
+                </div>
+                <div className="text-center backdrop-blur-sm bg-black/20 rounded-xl p-4 border border-white/30">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">5+</div>
+                  <div className="text-white/90 font-medium">Expert Coaches</div>
+                </div>
+                <div className="text-center backdrop-blur-sm bg-black/20 rounded-xl p-4 border border-white/30">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">5</div>
+                  <div className="text-white/90 font-medium">Age Categories</div>
+                </div>
+                <div className="text-center backdrop-blur-sm bg-black/20 rounded-xl p-4 border border-white/30">
+                  <div className="text-3xl md:text-4xl font-bold text-yellow-300 drop-shadow-lg">5</div>
+                  <div className="text-white/90 font-medium">Years Excellence</div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary">5+</div>
-                <div className="text-foreground">Expert Coaches</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-accent">5</div>
-                <div className="text-foreground">Age Categories</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-primary">5</div>
-                <div className="text-foreground">Years Excellence</div>
-              </div>
-            </div>
-          </ScrollAnimation>
+            </ScrollAnimation>
+          </div>
         </div>
       </section>
 
@@ -943,6 +955,17 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </ScrollAnimation>
+
+            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <img
+                src="/garfa-championship-trophy-presentation.jpeg"
+                alt="GARFA Championship Trophy Presentation"
+                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+              />
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <span className="text-white font-semibold text-lg">Championship Victory</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1022,12 +1045,36 @@ export default function HomePage() {
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-card-foreground mb-3">Elite Training Camp</h3>
                   <p className="text-muted-foreground text-pretty mb-4">
-                    High-level training sessions in professional stadium facilities, where our players experience
-                    elite-level conditioning and tactical development under expert coaching guidance.
+                    High-level training sessions in professional stadium facilities, preparing our players for
+                    competitive leagues and developing advanced technical skills under expert coaching guidance.
                   </p>
                   <div className="flex items-center text-sm text-muted-foreground">
                     <Calendar className="h-4 w-4 mr-2" />
-                    <span>June 2025</span>
+                    <span>August 2024</span>
+                  </div>
+                </CardContent>
+              </Card>
+            </ScrollAnimation>
+
+            <ScrollAnimation delay={300}>
+              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src="/garfa-championship-celebration.jpeg"
+                    alt="GARFA Championship Celebration"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">GARFA Division 2 Champions</h3>
+                  <p className="text-muted-foreground text-pretty mb-4">
+                    Historic victory celebration as <strong>JOS CITY SOCCER ACADEMY</strong> claims the GARFA 2023/24
+                    Division 2 Zone 6 Championship title, marking a milestone achievement in the academy's competitive
+                    journey.
+                  </p>
+                  <div className="flex items-center text-sm text-muted-foreground">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    <span>May 2024</span>
                   </div>
                 </CardContent>
               </Card>
@@ -1170,7 +1217,7 @@ export default function HomePage() {
           </ScrollAnimation>
 
           <ScrollAnimation delay={0.2}>
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center justify-items-center">
               <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
                 <img
                   src="/sponsor-ebisbank.jpeg"
@@ -1223,6 +1270,24 @@ export default function HomePage() {
                   className="w-full h-16 object-contain mb-3"
                 />
                 <p className="text-sm font-medium text-gray-700">MUDI Africa</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-ghana-football-association.jpeg"
+                  alt="Ghana Football Association - Official Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">Ghana FA</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                <img
+                  src="/sponsor-fifa.jpeg"
+                  alt="FIFA - International Football Partner"
+                  className="w-full h-16 object-contain mb-3"
+                />
+                <p className="text-sm font-medium text-gray-700">FIFA</p>
               </div>
             </div>
           </ScrollAnimation>
