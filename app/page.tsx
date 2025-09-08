@@ -97,14 +97,14 @@ export default function HomePage() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10"
+        className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 pt-20 sm:pt-0"
       >
         <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-100"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="backdrop-blur-sm bg-black/1 border border-white/30 rounded-3xl p-8 md:p-12 shadow-2xl">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-0">
+          <div className="backdrop-blur-sm bg-black/1 border border-white/30 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
             <ScrollAnimation>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 text-balance drop-shadow-lg">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance drop-shadow-lg leading-tight">
                 <strong>JOS CITY SOCCER</strong>{" "}
                 <span className="text-yellow-300 drop-shadow-lg font-extrabold">
                   <strong>ACADEMY</strong>
@@ -113,7 +113,7 @@ export default function HomePage() {
             </ScrollAnimation>
             <ScrollAnimation delay={200}>
               <p
-                className="text-xl md:text-2xl text-white/100 mb-8 max-w-3xl mx-auto text-pretty drop-shadow-md font-medium"
+                className="text-lg sm:text-xl md:text-2xl text-white/100 mb-6 sm:mb-8 max-w-3xl mx-auto text-pretty drop-shadow-md font-medium"
                 style={{
                   WebkitTextStroke: "0.3px red",
                   textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black",
