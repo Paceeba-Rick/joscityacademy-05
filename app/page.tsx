@@ -102,7 +102,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-100"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-0">
-          <div className="backdrop-blur-sm bg-black/1 border border-white/30 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl">
+          <div className="backdrop-blur-sm border border-white/30 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl opacity-100 bg-transparent">
             <ScrollAnimation>
               <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance drop-shadow-lg leading-tight">
                 <strong>JOS CITY SOCCER</strong>{" "}
@@ -182,7 +182,7 @@ export default function HomePage() {
                   athletes aged 10-20 years, with accommodation facilities and field-based learning that focuses on
                   practical skills development.
                 </p>
-                <p className="text-lg text-muted-foreground mb-6 text-pretty">
+                <p className="text-lg text-muted-foreground mb-6 text-pretty text-left">
                   Under the leadership of CEO Mr. Joseph Addai, Deputy CEO and Brand Director Akua Nhyiradom Boahen, and
                   Head of Marketing Owen Abrefa Busia, we've created a unique environment where everything happens on
                   the field - no formal classroom lessons, just pure soccer development.
@@ -956,16 +956,7 @@ export default function HomePage() {
               </div>
             </ScrollAnimation>
 
-            <div className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-              <img
-                src="/garfa-championship-trophy-presentation.jpeg"
-                alt="GARFA Championship Trophy Presentation"
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <span className="text-white font-semibold text-lg">Championship Victory</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       </section>
@@ -1056,29 +1047,7 @@ export default function HomePage() {
               </Card>
             </ScrollAnimation>
 
-            <ScrollAnimation delay={300}>
-              <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src="/garfa-championship-celebration.jpeg"
-                    alt="GARFA Championship Celebration"
-                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-card-foreground mb-3">GARFA Division 2 Champions</h3>
-                  <p className="text-muted-foreground text-pretty mb-4">
-                    Historic victory celebration as <strong>JOS CITY SOCCER ACADEMY</strong> claims the GARFA 2023/24
-                    Division 2 Zone 6 Championship title, marking a milestone achievement in the academy's competitive
-                    journey.
-                  </p>
-                  <div className="flex items-center text-sm text-muted-foreground">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>May 2024</span>
-                  </div>
-                </CardContent>
-              </Card>
-            </ScrollAnimation>
+            
           </div>
         </div>
       </section>
