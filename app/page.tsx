@@ -1195,6 +1195,56 @@ export default function HomePage() {
                   </div>
                 </ClickableImage>
               </ScrollAnimation>
+
+              <ScrollAnimation delay={1200}>
+                <ClickableImage
+                  src="/skill-training-session.jpeg"
+                  alt="Player practicing ball control skills during training with teammates in academy jerseys"
+                  className="col-span-2 relative overflow-hidden rounded-lg group"
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src="/skill-training-session.jpeg"
+                      alt="Player practicing ball control skills during training with teammates in academy jerseys"
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/70 px-3 py-1 rounded-md backdrop-blur-sm">
+                      <p
+                        className="text-sm font-medium drop-shadow-lg"
+                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+                      >
+                        Skill Development
+                      </p>
+                    </div>
+                  </div>
+                </ClickableImage>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={1250}>
+                <ClickableImage
+                  src="/goalkeeper-friendship-moment.jpeg"
+                  alt="Two players from different teams showing sportsmanship and friendship in stadium"
+                  className="col-span-1 relative overflow-hidden rounded-lg group"
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src="/goalkeeper-friendship-moment.jpeg"
+                      alt="Two players from different teams showing sportsmanship and friendship in stadium"
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                    <div className="absolute inset-0 bg-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/70 px-3 py-1 rounded-md backdrop-blur-sm">
+                      <p
+                        className="text-sm font-medium drop-shadow-lg"
+                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+                      >
+                        Sportsmanship
+                      </p>
+                    </div>
+                  </div>
+                </ClickableImage>
+              </ScrollAnimation>
             </div>
           </div>
         </section>
