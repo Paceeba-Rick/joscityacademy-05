@@ -115,7 +115,7 @@ export default function HomePage() {
               <p
                 className="text-lg sm:text-xl md:text-2xl text-white/100 mb-6 sm:mb-8 max-w-3xl mx-auto text-pretty drop-shadow-md font-medium"
                 style={{
-                  WebkitTextStroke: "0.3px red",
+                  WebkitTextStroke: "0.3px white",
                   textShadow: "1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black",
                 }}
               >
