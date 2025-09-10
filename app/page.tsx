@@ -999,25 +999,46 @@ export default function HomePage() {
 
               <ScrollAnimation delay={650}>
                 <ClickableImage
-                  src="/large-group-academy-photo.jpeg"
-                  alt="Large group photo of academy players"
-                  className="col-span-3 relative overflow-hidden rounded-lg group"
+                  src="/ghana-national-team-player-goalpost.jpeg"
+                  alt="Young player in Ghana national team training jersey by goal post"
+                  className="col-span-1 relative overflow-hidden rounded-lg group"
                 >
                   <div className="w-full h-full">
                     <img
-                      src="/large-group-academy-photo.jpeg"
-                      alt="Large group photo of academy players"
-                      className="w-full h-full object-cover aspect-[3/2]"
+                      src="/ghana-national-team-player-goalpost.jpeg"
+                      alt="Young player in Ghana national team training jersey by goal post"
+                      className="w-full h-full object-cover aspect-square"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-medium">Academy Family</p>
+                      <p className="text-sm font-medium bg-black/70 px-2 py-1 rounded text-shadow-lg">National Pride</p>
                     </div>
                   </div>
                 </ClickableImage>
               </ScrollAnimation>
 
-              {/* Adding back more original photos in 3-column layout */}
+              <ScrollAnimation delay={675}>
+                <ClickableImage
+                  src="/ghana-national-team-player-pointing.jpeg"
+                  alt="Player in Ghana national team jersey pointing confidently on training field"
+                  className="col-span-1 relative overflow-hidden rounded-lg group"
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src="/ghana-national-team-player-pointing.jpeg"
+                      alt="Player in Ghana national team jersey pointing confidently on training field"
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                    <div className="absolute inset-0 bg-red-600/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <p className="text-sm font-medium bg-black/70 px-2 py-1 rounded text-shadow-lg">
+                        National Team Ready
+                      </p>
+                    </div>
+                  </div>
+                </ClickableImage>
+              </ScrollAnimation>
+
               <ScrollAnimation delay={700}>
                 <ClickableImage
                   src="/team-photo-red-jerseys.jpeg"
@@ -1200,7 +1221,7 @@ export default function HomePage() {
                 <ClickableImage
                   src="/skill-training-session.jpeg"
                   alt="Player practicing ball control skills during training with teammates in academy jerseys"
-                  className="col-span-2 relative overflow-hidden rounded-lg group"
+                  className="col-span-1 row-span-2 relative overflow-hidden rounded-lg group"
                 >
                   <div className="w-full h-full">
                     <img
