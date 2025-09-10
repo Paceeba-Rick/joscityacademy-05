@@ -645,9 +645,19 @@ export default function HomePage() {
                       alt="Players walking onto field in various team jerseys for match preparation"
                       className="w-full h-full object-cover aspect-[3/2]"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-accent/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-medium">Match Day Excellence</p>
+                      <div className="bg-black/90 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/20">
+                        <p
+                          className="text-sm font-bold text-white drop-shadow-lg"
+                          style={{
+                            textShadow: "2px 2px 4px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,0.8)",
+                            color: "#ffffff",
+                          }}
+                        >
+                          Training Excellence
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </ClickableImage>
@@ -668,7 +678,17 @@ export default function HomePage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-medium">Leadership Team</p>
+                      <div className="bg-black/90 px-4 py-2 rounded-lg backdrop-blur-sm border border-white/20">
+                        <p
+                          className="text-sm font-bold text-white drop-shadow-lg"
+                          style={{
+                            textShadow: "2px 2px 4px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,0.8)",
+                            color: "#ffffff",
+                          }}
+                        >
+                          Mentorship
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </ClickableImage>
