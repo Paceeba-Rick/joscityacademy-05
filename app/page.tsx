@@ -1286,6 +1286,56 @@ export default function HomePage() {
                   </div>
                 </ClickableImage>
               </ScrollAnimation>
+
+              <ScrollAnimation delay={1300}>
+                <ClickableImage
+                  src="/young-child-with-soccer-ball.jpeg"
+                  alt="Young child in light blue sweater holding colorful soccer ball on grass field"
+                  className="col-span-1 relative overflow-hidden rounded-lg group"
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src="/young-child-with-soccer-ball.jpeg"
+                      alt="Young child in light blue sweater holding colorful soccer ball on grass field"
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                    <div className="absolute inset-0 bg-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/70 px-3 py-1 rounded-md backdrop-blur-sm">
+                      <p
+                        className="text-sm font-medium drop-shadow-lg"
+                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+                      >
+                        Early Development
+                      </p>
+                    </div>
+                  </div>
+                </ClickableImage>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={1350}>
+                <ClickableImage
+                  src="/teenage-player-teal-jersey.jpeg"
+                  alt="Teenage player in turquoise Nike training jersey standing confidently on artificial turf"
+                  className="col-span-1 relative overflow-hidden rounded-lg group"
+                >
+                  <div className="w-full h-full">
+                    <img
+                      src="/teenage-player-teal-jersey.jpeg"
+                      alt="Teenage player in turquoise Nike training jersey standing confidently on artificial turf"
+                      className="w-full h-full object-cover aspect-square"
+                    />
+                    <div className="absolute inset-0 bg-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    <div className="absolute bottom-4 left-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/70 px-3 py-1 rounded-md backdrop-blur-sm">
+                      <p
+                        className="text-sm font-medium drop-shadow-lg"
+                        style={{ textShadow: "2px 2px 4px rgba(0,0,0,0.8)" }}
+                      >
+                        Youth Excellence
+                      </p>
+                    </div>
+                  </div>
+                </ClickableImage>
+              </ScrollAnimation>
             </div>
           </div>
         </section>
