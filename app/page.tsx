@@ -1340,6 +1340,158 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Recents Section */}
+        <section id="recents" className="py-20 bg-background">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollAnimation>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Recents</h2>
+                <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+                  Latest moments from our academy showcasing international partnerships, coaching excellence, and team
+                  development activities.
+                </p>
+              </div>
+            </ScrollAnimation>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ScrollAnimation delay={0}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <ClickableImage
+                    src="/coaching-staff-meeting.jpeg"
+                    alt="Coaching staff and players meeting on grass field with buildings in background"
+                    className="aspect-[4/3] overflow-hidden"
+                  >
+                    <img
+                      src="/coaching-staff-meeting.jpeg"
+                      alt="Coaching staff and players meeting on grass field with buildings in background"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </ClickableImage>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">Coaching Staff Meeting</h3>
+                    <p className="text-muted-foreground text-pretty mb-4">
+                      International coaching staff collaborating with local players and academy management, showcasing
+                      our commitment to global standards and local talent development.
+                    </p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>September 2025</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={100}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <ClickableImage
+                    src="/team-tactical-discussion.jpeg"
+                    alt="Coach in purple shirt addressing players in blue and black striped jerseys during team talk"
+                    className="aspect-[4/3] overflow-hidden"
+                  >
+                    <img
+                      src="/team-tactical-discussion.jpeg"
+                      alt="Coach in purple shirt addressing players in blue and black striped jerseys during team talk"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </ClickableImage>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">Team Tactical Discussion</h3>
+                    <p className="text-muted-foreground text-pretty mb-4">
+                      Strategic team talk session with our coaching staff providing tactical guidance to players,
+                      emphasizing the importance of communication and understanding in football development.
+                    </p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>September 2025</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={200}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <ClickableImage
+                    src="/coach-player-partnership.jpeg"
+                    alt="International coach and academy player posing together on grass field with hills in background"
+                    className="aspect-[4/3] overflow-hidden"
+                  >
+                    <img
+                      src="/coach-player-partnership.jpeg"
+                      alt="International coach and academy player posing together on grass field with hills in background"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </ClickableImage>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">International Partners</h3>
+                    <p className="text-muted-foreground text-pretty mb-4">
+                      Building strong relationships between international coaching staff and our academy players,
+                      fostering mentorship and creating pathways for global football opportunities.
+                    </p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>September 2025</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={300}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                  <ClickableImage
+                    src="/coaching-staff-selfie.jpeg"
+                    alt="Close-up selfie of local and international coaching staff members smiling together"
+                    className="aspect-[4/3] overflow-hidden"
+                  >
+                    <img
+                      src="/coaching-staff-selfie.jpeg"
+                      alt="Close-up selfie of local and international coaching staff members smiling together"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </ClickableImage>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">Coaching Unity</h3>
+                    <p className="text-muted-foreground text-pretty mb-4">
+                      Celebrating the strong bond between our CEO and international coaching staff, demonstrating the
+                      collaborative spirit that drives our academy's success and player development.
+                    </p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>September 2025</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              <ScrollAnimation delay={400}>
+                <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2 md:col-span-2 lg:col-span-1">
+                  <ClickableImage
+                    src="/match-supervision-moment.jpeg"
+                    alt="Coach in yellow shirt supervising match with players in action on artificial turf field"
+                    className="aspect-[4/3] overflow-hidden"
+                  >
+                    <img
+                      src="/match-supervision-moment.jpeg"
+                      alt="Coach in yellow shirt supervising match with players in action on artificial turf field"
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                    />
+                  </ClickableImage>
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-card-foreground mb-3">Match Supervision</h3>
+                    <p className="text-muted-foreground text-pretty mb-4">
+                      Active coaching supervision during competitive matches, ensuring our players receive real-time
+                      guidance and tactical adjustments to enhance their performance and learning experience.
+                    </p>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>September 2025</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+            </div>
+          </div>
+        </section>
+
         {/* Special Occasions Section */}
         <section id="occasions" className="py-20 bg-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1630,6 +1782,15 @@ tt_from=whatsapp&enable_checksum=1&utm_medium=ios&share_link_id=15F4F62A-1F5B-42
                     className="w-full h-16 object-contain mb-3"
                   />
                   <p className="text-sm font-medium text-gray-700">MUDI Africa</p>
+                </div>
+
+                <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
+                  <img
+                    src="/sponsor-cheers.jpeg"
+                    alt="CHEERS - Beverage Partner"
+                    className="w-full h-16 object-contain mb-3"
+                  />
+                  <p className="text-sm font-medium text-gray-700">CHEERS</p>
                 </div>
 
                 <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 w-full max-w-xs text-center">
