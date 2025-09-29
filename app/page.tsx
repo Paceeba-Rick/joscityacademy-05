@@ -202,6 +202,8 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* All Africa Super Camp Achievement Section */}
+
         {/* About Section */}
         <section id="about" className="py-20 bg-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1350,6 +1352,105 @@ export default function HomePage() {
                   Latest moments from our academy showcasing international partnerships, coaching excellence, and team
                   development activities.
                 </p>
+              </div>
+            </ScrollAnimation>
+
+            <ScrollAnimation>
+              <div className="mb-16 p-8 bg-gradient-to-br from-accent/5 to-primary/5 rounded-2xl border border-primary/10">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center bg-accent/10 text-accent px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <Trophy className="h-4 w-4 mr-2" />
+                    MAJOR ACHIEVEMENT
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
+                    All Africa Super Camp Tournament
+                  </h3>
+                  <p className="text-muted-foreground max-w-3xl mx-auto text-pretty">
+                    We are proud to announce that two of our talented academy players have been selected to represent
+                    Ghana at the prestigious <strong>All Africa Super Camp Tournament in Kigali, Rwanda</strong>. This
+                    international recognition showcases the exceptional quality of training and development at JOS CITY
+                    SOCCER ACADEMY.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-3 gap-6">
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <ClickableImage
+                      src="/ceo-player-airport-departure.jpeg"
+                      alt="CEO Joseph Addai with academy player at airport departure for All Africa Super Camp tournament"
+                      className="aspect-[4/3] overflow-hidden"
+                    >
+                      <img
+                        src="/ceo-player-airport-departure.jpeg"
+                        alt="CEO Joseph Addai with academy player at airport departure for All Africa Super Camp tournament"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </ClickableImage>
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-bold text-card-foreground mb-2">CEO Send-Off</h4>
+                      <p className="text-sm text-muted-foreground text-pretty">
+                        CEO Mr. Joseph Addai personally seeing off our selected player at the airport.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <ClickableImage
+                      src="/ceo-two-players-airport.jpeg"
+                      alt="CEO with two academy players at airport before departure to All Africa Super Camp"
+                      className="aspect-[4/3] overflow-hidden"
+                    >
+                      <img
+                        src="/ceo-two-players-airport.jpeg"
+                        alt="CEO with two academy players at airport before departure to All Africa Super Camp"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </ClickableImage>
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-bold text-card-foreground mb-2">Selected Players</h4>
+                      <p className="text-sm text-muted-foreground text-pretty">
+                        Our two exceptional academy players ready for their journey to represent Ghana.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <ClickableImage
+                      src="/all-africa-tournament-sendoff.jpeg"
+                      alt="Final sendoff moment with CEO and both players at airport with travel documents"
+                      className="aspect-[4/3] overflow-hidden"
+                    >
+                      <img
+                        src="/all-africa-tournament-sendoff.jpeg"
+                        alt="Final sendoff moment with CEO and both players at airport with travel documents"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </ClickableImage>
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-bold text-card-foreground mb-2">Tournament Ready</h4>
+                      <p className="text-sm text-muted-foreground text-pretty">
+                        Final preparations complete with travel documents in hand, ready to compete internationally.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+                    <div className="flex items-center">
+                      <MapPin className="h-4 w-4 mr-2 text-primary" />
+                      <span>Kigali, Rwanda</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-2 text-primary" />
+                      <span>September 2025</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Users className="h-4 w-4 mr-2 text-primary" />
+                      <span>2 Academy Players Selected</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ScrollAnimation>
 
