@@ -40,8 +40,8 @@ const structuredData = {
   description:
     "Leading soccer academy in Jos City, Ghana offering professional training programs for young athletes with expert coaching and international standards.",
   url: "https://joscitysoccer.vercel.app",
-  logo: "https://joscitysoccer.vercel.app/hero-team-celebration.jpeg",
-  image: "https://joscitysoccer.vercel.app/hero-team-celebration.jpeg",
+  logo: "https://joscitysoccer.vercel.app/hero-team-celebration.jpg",
+  image: "https://joscitysoccer.vercel.app/hero-team-celebration.jpg",
   telephone: "+233 201 000 109",
   email: "info.joscitysoccer@gmail.com",
   address: {
@@ -134,10 +134,16 @@ export default function HomePage() {
           id="home"
           className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 pt-20 sm:pt-0"
         >
-          <div className="absolute inset-0 bg-[url('/hero-team-celebration.jpeg')] bg-cover bg-center opacity-100"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/20 via-black/10 to-transparent"></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center opacity-100"
+            style={{
+              backgroundImage:
+                "url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cd5a25c8-8024-41b3-9d2d-76b77542a140-Yk4ofRsdJEw9tUU2WQE45fvyxRCPdE.jpeg')",
+            }}
+          ></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/20 to-black/30"></div>
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-0">
-            <div className="backdrop-blur-sm border border-white/30 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl opacity-100 bg-transparent">
+            <div className="backdrop-blur-sm border border-white/30 rounded-3xl p-6 sm:p-8 md:p-12 shadow-2xl opacity-100 bg-black/10">
               <ScrollAnimation>
                 <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 text-balance drop-shadow-lg leading-tight">
                   <strong>JOS CITY SOCCER</strong>{" "}
@@ -980,7 +986,6 @@ export default function HomePage() {
                 </ClickableImage>
               </ScrollAnimation>
 
-              {/* Community moment - adjusted for 3 columns */}
               <ScrollAnimation delay={550}>
                 <ClickableImage
                   src="/player-woman-stadium-seats.jpeg"
@@ -1448,6 +1453,86 @@ export default function HomePage() {
                     <div className="flex items-center">
                       <Users className="h-4 w-4 mr-2 text-primary" />
                       <span>2 Academy Players Selected</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ScrollAnimation>
+
+            {/* Augustine's European success story */}
+            <ScrollAnimation>
+              <div className="mb-16 p-8 bg-gradient-to-br from-primary/5 to-accent/5 rounded-2xl border border-accent/10">
+                <div className="text-center mb-12">
+                  <div className="inline-flex items-center bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-4">
+                    <Star className="h-4 w-4 mr-2" />
+                    PLAYER SUCCESS STORY
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">Augustine - Playing in Europe</h3>
+                  <p className="text-muted-foreground max-w-3xl mx-auto text-pretty">
+                    Meet <strong>Augustine</strong>, one of our academy graduates who has successfully made the leap to
+                    European football. His journey from JOS CITY SOCCER ACADEMY to competing on European pitches
+                    represents the pinnacle of our player development pathway and demonstrates our commitment to
+                    preparing players for international opportunities.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <ClickableImage
+                      src="/augustine-europe-action-1.jpeg"
+                      alt="Augustine playing football in Europe wearing Ghana national team jersey"
+                      className="aspect-[4/3] overflow-hidden"
+                    >
+                      <img
+                        src="/augustine-europe-action-1.jpeg"
+                        alt="Augustine playing football in Europe wearing Ghana national team jersey"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </ClickableImage>
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-bold text-card-foreground mb-2">European Action</h4>
+                      <p className="text-sm text-muted-foreground text-pretty">
+                        Augustine showcasing his skills on a European football pitch, representing Ghana with pride and
+                        excellence.
+                      </p>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-2">
+                    <ClickableImage
+                      src="/augustine-europe-action-2.jpeg"
+                      alt="Augustine in match action playing for Ghana in Europe"
+                      className="aspect-[4/3] overflow-hidden"
+                    >
+                      <img
+                        src="/augustine-europe-action-2.jpeg"
+                        alt="Augustine in match action playing for Ghana in Europe"
+                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      />
+                    </ClickableImage>
+                    <CardContent className="p-4">
+                      <h4 className="text-lg font-bold text-card-foreground mb-2">Competitive Excellence</h4>
+                      <p className="text-sm text-muted-foreground text-pretty">
+                        Competing at the highest level in European football, Augustine embodies the success of our
+                        academy's training program.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                <div className="mt-8 text-center">
+                  <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">
+                    <div className="flex items-center">
+                      <MapPin className="h-4 w-4 mr-2 text-primary" />
+                      <span>Europe</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Trophy className="h-4 w-4 mr-2 text-primary" />
+                      <span>Professional Player</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Star className="h-4 w-4 mr-2 text-primary" />
+                      <span>Academy Graduate Success</span>
                     </div>
                   </div>
                 </div>
